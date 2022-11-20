@@ -9,7 +9,7 @@ void Polynomial::read() {
 	printf("각 항의 계수를 입력하시오 (총 %d개): ", degree + 1);
 	for (int i = 0; i <= degree; i++)
 	{
-		scanf_s("%f", coef + 1);
+		scanf_s("%f", coef + i);
 	}
 }
 

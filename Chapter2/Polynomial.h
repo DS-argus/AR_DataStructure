@@ -7,7 +7,7 @@ class Polynomial {
 	float coef[MAX_DEGREE];
 
 public:
-	Polynomial() { degree = 0; };
+	Polynomial() { degree = 0; }
 
 	void read();
 
