@@ -127,12 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ex3.cpp" />
+    <ClCompile Include="ex6.cpp" />
+    <ClCompile Include="ex7.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Findmax1D.cpp" />
     <ClCompile Include="Findmax2D.cpp" />
     <ClCompile Include="Polynomial.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ex3.h" />
+    <ClInclude Include="ex6.h" />
+    <ClInclude Include="ex7.h" />
     <ClInclude Include="Findmax1D.h" />
     <ClInclude Include="Findmax2D.h" />
     <ClInclude Include="Polynomial.h" />
