@@ -5,6 +5,7 @@
 #include "ex3.h"
 #include "ex6.h"
 #include "ex7.h"
+#include "ex8.h"
 
 
 
@@ -13,23 +14,14 @@ using namespace std;
 
 int main()
 {
+	SparsePoly a, b, c;
 
-	transmat(5, 5);
-
-	//Polynomial2 a, b, c, d, e;
-
-	//a.read();
-	//b.read();
-	//c.add(a, b);
-	//d.sub(a, b);
-	//e.mult(a, b);
-
-	//a.display("A = ");
-	//b.display("B = ");
-	//c.display("A+B = ");
-	//d.display("A-B = ");
-	//e.display("A*B = ");
-
+	a.read();
+	b.read();
+	c.add(a, b);
+	a.display("a = ");
+	b.display("b = ");
+	c.display("a+b = ");
 
 
 }
