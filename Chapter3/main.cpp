@@ -1,10 +1,11 @@
 ﻿#include <iostream>
-#include "MazeSolver.h"
-
-
+#include "CheckMatching.h"
 
 int main()
 {
-	mazeSolver();
+	checkMatching("CheckMatching.h");
+	//checkMatching("ArrayStack.h");
+
+
 } 
 

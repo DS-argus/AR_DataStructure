@@ -34,7 +34,7 @@ bool isValidloc(int r, int c) {
 	}
 	else
 	{
-		return map[c][r] == '0' || map[r][c] == 'x';
+		return map[r][c] == '0' || map[r][c] == 'x';
 	}
 }
 
@@ -77,7 +77,6 @@ void mazeSolver() {
 				locStack.push(Location2D(r, c + 1));
 			}
 		}
-		printf("미로 탐색 실패\n");
 	}
-
+	printf("미로 탐색 실패\n");
 }

@@ -1,6 +1,5 @@
 #pragma once
 #include "ArrayStack.h"
-
 using namespace std;
 
 bool checkMatching(const char* filename) {
@@ -14,13 +13,16 @@ bool checkMatching(const char* filename) {
 
 	int nLine = 1;
 	int nChar = 0;
-
 	ArrayStack stack;
-
 	char ch;
-	
+	bool small_quote_flag = false;
+
 	while ((ch = getc(p_file)) != EOF)
 	{
+
+		stack.display();
+		cout << "Line : " << nLine << endl;
+
 		if (ch == '\n')
 		{
 			nLine++;
@@ -28,20 +30,36 @@ bool checkMatching(const char* filename) {
 
 		nChar++;
 
+		if (ch == '\'' && small_quote_flag == false)
+		{
+			small_quote_flag = true;
+		}
+		else if (ch == '\'' && small_quote_flag == true)
+		{
+			small_quote_flag = false;
+		}
+
+
 		if (ch == '[' || ch == '(' || ch == '{')
 		{
-			stack.push(ch);
+			if (small_quote_flag == false)
+			{
+				stack.push(ch);
+			}
 		}
 		else if (ch == ']' || ch == ')' || ch == '}')
 		{
-			int prev = stack.pop();
-			if ((ch == ']' && prev != '[') ||
-				(ch == ')' && prev != '(') ||
-				(ch == '}' && prev != '{'))
-			{
-				break;
-			}
 
+			if (small_quote_flag == false)
+			{
+				int prev = stack.pop();
+				if ((ch == ']' && prev != '[') ||
+					(ch == ')' && prev != '(') ||
+					(ch == '}' && prev != '{'))
+				{
+					break;
+				}
+			}
 		}
 	}
 
@@ -56,10 +74,5 @@ bool checkMatching(const char* filename) {
 	{
 		printf("OK: 괄호닫기정상(라인수=%d, 문자수=%d)\n\n", nLine, nChar);
 	}
-
 	return stack.isEmpty();
-
-
-
-}
-
+};
