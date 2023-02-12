@@ -1,6 +1,5 @@
 #include <iostream>
-
-using namespace std;
+#include "SequentialSearch.hpp"
 
 int sequentialSearch(int list[], int n, int key) {
 
@@ -12,5 +11,5 @@ int sequentialSearch(int list[], int n, int key) {
 		}
 	}
 
-	return -1;
+	return 100;
 };

@@ -1,8 +1,8 @@
-#include<iostream>
-#include "Time.h"
-#include "SequentialSearch.h"
-
+#include <iostream>
 using namespace std;
+
+#include "Time.hpp"
+#include "SequentialSearch.hpp"
 
 int main() {
 

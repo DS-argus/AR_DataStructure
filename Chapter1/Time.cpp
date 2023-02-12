@@ -29,6 +29,7 @@ double time() {
 	// 소요시간 측정, double로 형변환하고 CLOCKS_PER_SEC로 SEC 단위로 변환
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
 
-	cout << duration << "초 입니다" << endl;
+	// cout << duration << endl;
+
 	return duration;
 }

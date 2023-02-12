@@ -5,13 +5,13 @@ using namespace std;
 
 
 void SparsePoly::read() {
-	printf("희소 다항식의 항 개수를 입력하시오: ");
-	scanf_s("%d", &num);
+	printf("희소 다항식의 항 개수를 입력해주세요 : ");
+	scanf("%d", &num);
 
 	printf("각 항의 (차수, 계수)를 입력하시오 (총 %d개): ", num);
 	for (int i = 0; i < num; i++)
 	{
-		scanf_s("%d, %f", &coef[i].expon, &coef[i].coeff);
+		scanf("%d, %f", &coef[i].expon, &coef[i].coeff);
 	}
 }
 

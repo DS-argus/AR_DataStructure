@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#define _CRT_SECUER_NO_WARNINGS 
+
 #include "Findmax1D.h"
 #include "Findmax2D.h"
 #include "Polynomial.h"

@@ -15,7 +15,7 @@ void transmat(int row, int col) {
 	{
 		for (int j = 0; j < col; j++)
 		{
-			scanf_s("%f", & mat[i][j]);
+			scanf("%f", & mat[i][j]);
 		}
 	}
 
