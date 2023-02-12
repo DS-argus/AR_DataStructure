@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-#include"Customer.h"
+#include"Customer.hpp"
 #define MAX_QUEUE_SIZE 100
 
 inline void error(const char* message) {

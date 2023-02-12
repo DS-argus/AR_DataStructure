@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CircularQueue.h"
+#include "CircularQueue.hpp"
 
 class CircularDeque : public CircularQueue {
 public:

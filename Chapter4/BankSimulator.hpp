@@ -1,5 +1,5 @@
 #pragma once
-#include "CustomerQueue.h"
+#include "CustomerQueue.hpp"
 
 class BankSimulator {
 private:
@@ -18,7 +18,7 @@ private:
 
 	void InsertCustomer(int arrivalTime) {
 		Customer a(++nCustomers, arrivalTime, RandServiceTime());
-		printf("°í°´ %d ¹æ¹®(¼­ºñ½º ½Ã°£:%dºÐ)\n", a.id, a.tService);
+		printf("ï¿½ï¿½ï¿½ï¿½ %d ï¿½æ¹®(ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½:%dï¿½ï¿½)\n", a.id, a.tService);
 		que.enqueue(a);
 	}
 
@@ -26,14 +26,14 @@ public:
 	BankSimulator(): nCustomers(0), totalWaitTime(0), nServedCustomers(0){}
 
 	void readSimulationParameters() {
-		printf("½Ã¹Ä·¹ÀÌ¼Ç ÇÒ ÃÖ´ë ½Ã°£ (¿¹:10) = ");
-		scanf_s("%d", &nSimulation);
+		printf("ï¿½Ã¹Ä·ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ã°ï¿½ (ï¿½ï¿½:10) = ");
+		scanf("%d", &nSimulation);
 
-		printf("´ÜÀ§½Ã°£¿¡ µµÂøÇÏ´Â °í°´ ¼ö (¿¹:0.7) = ");
-		scanf_s("%lf", &probArrival);
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ (ï¿½ï¿½:0.7) = ");
+		scanf("%lf", &probArrival);
 
-		printf("ÇÑ °í°´¿¡ ´ëÇÑ ÃÖ´ë ¼­ºñ½º ½Ã°£ (¿¹:5) = ");
-		scanf_s("%d", &tMaxService);
+		printf("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ (ï¿½ï¿½:5) = ");
+		scanf("%d", &tMaxService);
 
 		printf("====================================================\n");
 	}
@@ -45,7 +45,7 @@ public:
 		while (clock < nSimulation)
 		{
 			clock++;
-			printf("ÇöÀç½Ã°¢=%d\n", clock);
+			printf("ï¿½ï¿½ï¿½ï¿½Ã°ï¿?=%d\n", clock);
 
 			if (IsNewCustomer())
 			{
@@ -66,7 +66,7 @@ public:
 				Customer a = que.dequeue();
 				nServedCustomers++;
 				totalWaitTime += clock - a.tArrival;
-				printf("°í°´ %d ¼­ºñ½º ½ÃÀÛ (´ë±â½Ã°£:%dºÐ)\n", a.id, clock - a.tArrival);
+				printf("ï¿½ï¿½ï¿½ï¿½ %d ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ã°ï¿½:%dï¿½ï¿½)\n", a.id, clock - a.tArrival);
 
 				serviceTime = a.tService - 1;
 			}
@@ -76,10 +76,10 @@ public:
 	void printStat() {
 		printf("================================================\n");
 
-		printf("	¼­ºñ½º ¹ÞÀº °í°´¼ö	=%d\n", nServedCustomers);
-		printf("	ÀüÃ¼ ´ë±â ½Ã°£	=%dºÐ\n", totalWaitTime);
-		printf("	¼­ºñ½º°í°´ Æò±Õ´ë±â½Ã°£	=%-5.2fºÐ\n", (double)totalWaitTime/nServedCustomers);
-		printf("	ÇöÀç ´ë±â °í°´ ¼ö	=%d\n", nCustomers -nServedCustomers);
+		printf("	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	=%d\n", nServedCustomers);
+		printf("	ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿? ï¿½Ã°ï¿½	=%dï¿½ï¿½\n", totalWaitTime);
+		printf("	ï¿½ï¿½ï¿½ñ½º°ï¿½ï¿½ï¿½ ï¿½ï¿½Õ´ï¿½ï¿½Ã°ï¿?	=%-5.2fï¿½ï¿½\n", (double)totalWaitTime/nServedCustomers);
+		printf("	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿? ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½	=%d\n", nCustomers -nServedCustomers);
 	}
 
 };

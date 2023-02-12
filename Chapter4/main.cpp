@@ -1,10 +1,10 @@
 ﻿#include <iostream>
-//#include "CircularQueue.h"
-//#include "CircularDeque.h"
+//#include "CircularQueue.hpp"
+//#include "CircularDeque.hpp"
 //#include <ctime>
-//#include"BankSimulator.h"
-//#include "MazeSolverWithQueue.h"
-#include "Fibonacci.h"
+//#include"BankSimulator.hpp"
+//#include "MazeSolverWithQueue.hpp"
+#include "Fibonacci.hpp"
 
 
 int main()
