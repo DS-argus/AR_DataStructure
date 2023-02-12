@@ -29,7 +29,7 @@ public:
 
 
 	void display() {
-		printf(" 학번:%-15d 성명:%-10s 학과:%-20s\n", id, name.c_str(), dept.c_str());
+		printf(" Student ID:%-15d Name:%-10s Major:%-20s\n", id, name.c_str(), dept.c_str());
 	}
 
 };

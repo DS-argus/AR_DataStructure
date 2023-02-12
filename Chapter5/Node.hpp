@@ -1,5 +1,5 @@
 #pragma once
-#include "Student.h"
+#include "Student.hpp"
 class Node : public Student {
 private:
 	Node* link;
