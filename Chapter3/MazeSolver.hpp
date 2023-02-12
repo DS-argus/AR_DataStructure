@@ -54,7 +54,7 @@ void mazeSolver() {
 
 		if (map[r][c] == 'x')
 		{
-			printf("미로 탐색 성공\n");
+			printf("Success!\n");
 			return;
 		}
 		else
@@ -78,5 +78,5 @@ void mazeSolver() {
 			}
 		}
 	}
-	printf("미로 탐색 실패\n");
+	printf("Failed!\n");
 }

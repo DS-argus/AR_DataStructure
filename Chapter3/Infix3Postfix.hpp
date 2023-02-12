@@ -1,5 +1,5 @@
 #pragma once
-#include "ArrayStack.h"
+#include "ArrayStack.hpp"
 
 inline int precedence(char op) {
 	switch (op) {
@@ -27,7 +27,7 @@ void infix2Postfix(FILE* fp = stdin) {
 		if ((c>='0' && c<='9'))
 		{
 			ungetc(c, fp);
-			fscanf_s(fp, "%lf", &val);
+			fscanf(fp, "%lf", &val);
 			printf("%4.1f ", val);
 		}
 		else if (c == '(') 

@@ -1,5 +1,5 @@
 #pragma once
-#include "OperandStack.h"
+#include "OperandStack.hpp"
 
 double calcPostfixExpr(FILE* fp = stdin) {
 	char c;
@@ -22,7 +22,7 @@ double calcPostfixExpr(FILE* fp = stdin) {
 		{
 			ungetc(c, fp);
 			double val;
-			fscanf_s(fp, "%lf", &val);
+			fscanf(fp, "%lf", &val);
 			st.push(val);
 		}
 

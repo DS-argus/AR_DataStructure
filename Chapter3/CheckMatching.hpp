@@ -1,14 +1,17 @@
 #pragma once
-#include "ArrayStack.h"
+#include <stdio.h>
+
+#include "ArrayStack.hpp"
+
 using namespace std;
 
 bool checkMatching(const char* filename) {
-	FILE* p_file = NULL;
-	errno_t fp = fopen_s(&p_file, filename, "r");
+	// FILE* p_file = NULL;
+	FILE *p_file = fopen(filename, "r");
 
 	if (p_file == NULL)
 	{
-		error("Error: 파일이 존재하지 않습니다\n");
+		error("Error: File does not exist\n");
 	}
 
 	int nLine = 1;
@@ -65,14 +68,14 @@ bool checkMatching(const char* filename) {
 
 	fclose(p_file);
 
-	printf("[%s] 파일 검사결과:\n", filename);
+	printf("[%s] Result of inspection:\n", filename);
 	if (!stack.isEmpty())
 	{
-		printf("Error: 문제발견!(라인수=%d, 문자수=%d)\n\n", nLine, nChar);
+		printf("Error: Error detected!(lines=%d, words=%d)\n\n", nLine, nChar);
 	}
 	else
 	{
-		printf("OK: 괄호닫기정상(라인수=%d, 문자수=%d)\n\n", nLine, nChar);
+		printf("OK: No problem(lines=%d, words=%d)\n\n", nLine, nChar);
 	}
 	return stack.isEmpty();
 };
