@@ -1,6 +1,6 @@
 Chapter 5. 포인터와 연결리스트
 ===============
-
+----
 * 포인터
 
 ```C++
@@ -21,7 +21,7 @@ float *pf;
 pf = (float*)pi;    // 명시적 형변환 필요
 
 ```
-
+----
 * 자체 참조 클래스(self-referential class) : 클래스인데 내부에 동일한 클래스의 객체를 가리키는 포인터가 한 개 이상 존재하는 클래스
     * Linked List나 트리 구성할 때 기본단위로 사용
 ```C++
@@ -32,6 +32,7 @@ struct ListNode{
     ListNode* link;
 };
 ```
+----
 * 동적 메모리 할당
     * 실행 도중 메모리 할당
     * 필요한 만큼만 할당하고 원할 때 해제 가능
@@ -53,7 +54,7 @@ arrA[3] = 10;
 arrB[3] = 20;
 delete [] arrB;
 ```
-
+----
 * Linked List
     * node로 구성 : data field + link field(default 값은 NULL)
     * head pointer : 시작점을 pointing  
@@ -62,11 +63,21 @@ delete [] arrB;
         * Circular linked list : 마지막 노드가 첫번째 노드 pointing
         * Doubly linked list : 앞 뒤로 연결(link field 2개 필요)
     * 연결리스트로 스택 구현
+        * Student.hpp / Node.hpp / LinkedStack.hpp / LinkedStack.cpp
         * top은 단순히 Node를 가리키는 pointer
         * display는 while과 for loop 활용 가능
         * pop 해주면 따로 delete해줘야 함(peek은 stack 소멸될 때 함께 사라짐)
     * 연결리스트로 큐 구현
-
-
-
+        * Node2.hpp / LinkedQueue.hpp / LinkedQueue.cpp
+        * front가 시작점, rear가 끝점 pointing
+        * dequeue할 때, front == rear 인 경우 생각
+    
+----
+     
+* 연습문제
+1. 8
+2. 0
+3. 3번
+4. 4번 -> O(n) 소요
+5. 3번 -> 3번 필요
 
