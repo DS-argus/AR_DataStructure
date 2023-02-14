@@ -61,6 +61,12 @@ delete [] arrB;
         * Single linked list : 한 방향으로 연결
         * Circular linked list : 마지막 노드가 첫번째 노드 pointing
         * Doubly linked list : 앞 뒤로 연결(link field 2개 필요)
+    * 연결리스트로 스택 구현
+        * top은 단순히 Node를 가리키는 pointer
+        * display는 while과 for loop 활용 가능
+        * pop 해주면 따로 delete해줘야 함(peek은 stack 소멸될 때 함께 사라짐)
+    * 연결리스트로 큐 구현
 
 
-        
+
+
