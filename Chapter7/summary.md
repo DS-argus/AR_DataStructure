@@ -3,8 +3,8 @@ Chapter 7. 순환(recursion)
 ----
 * 순환
     * 함수를 호출할 때마다 stack의 활성 레코드(activation record)에 저장되어 recursion 가능
-    * ==순환 멈추는 부분 + 순환 호출하는 부분== 으로 구성
-        * 일부는 해결하고 남아있는 부분을 순환시키는 것(**==Divide and conquer==**)
+    * <mark>순환 멈추는 부분 + 순환 호출하는 부분</mark> 으로 구성
+        * 일부는 해결하고 남아있는 부분을 순환시키는 것(**<mark>Divide and conquer</mark>**)
         ```C++
         int factorial(int n)
         {
